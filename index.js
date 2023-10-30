@@ -304,8 +304,8 @@ function isTotalPriceExceedsMaxPrice(products, maxPrice) {
     return null
   }
   let totalPrice = products.reduce((accumulator, currentValue) => accumulator + currentValue.price, 0)
-  totalPrice = Math.round(totalPrice)
-  maxPrice = Math.round(maxPrice)
+  totalPrice = Math.fround(totalPrice)
+  maxPrice = Math.fround(maxPrice)
   return totalPrice > maxPrice
 }
 
